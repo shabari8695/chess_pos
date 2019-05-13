@@ -169,6 +169,7 @@ def fen_from_onehot(one_hot):
 def train_gen(features, labels, batch_size):
     for i, img in enumerate(features):
         y = onehot_from_fen(fen_from_filename(img))
+        print(y)
         x = process_image(img)
         yield x, y
 
